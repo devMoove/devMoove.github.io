@@ -1,0 +1,40 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4",
+    "@expo/vector-icons": "^10.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-react-native": "^4.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "expo": "^32.0.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "native-base": "^2.12.1",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.10.0",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-material-textfield": "^0.12.0",
+    "react-native-responsive-screen": "^1.2.2",
+    "react-navigation": "^3.9.2",
+    "realm": "^2.27.0"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^5.0.0"
+  },
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

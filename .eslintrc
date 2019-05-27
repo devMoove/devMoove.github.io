@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "react-native",
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ]
+}
