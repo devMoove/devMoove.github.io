@@ -261,10 +261,7 @@ class journey extends React.PureComponent {
     return (
       <View style={light.Journey.containers}>
         <Card style={light.Journey.stageWrapper}>
-          <View style={light.Journey.dotWrapper}>
-            {/** Run algorithm to generate dots here */}
-          </View>
-          <View style={light.Journey.inputWrapper}>
+          <View style={{ width: "100%" }}>
             {/** Input fields here */}
             <Dropdown
               style={light.Journey.dropDown}
