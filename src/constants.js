@@ -3,3 +3,4 @@
 
 // assets
 export const Banner = require("../assets/images/banner.png");
+export const Pointer = require("../assets/images/pointer.png");

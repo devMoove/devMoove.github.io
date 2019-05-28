@@ -15,6 +15,11 @@ export const DeviceWidth = width,
 export const statusBarHeight =
   Platform.OS === "ios" ? 35 : StatusBarManager.HEIGHT;
 
+export const Colors = {
+  primary: "#FF4E6A",
+  secondary: "black"
+};
+
 export const titleBar = StyleSheet.create({
   titleBar: {
     position: "absolute",
@@ -50,11 +55,11 @@ export const titleBar = StyleSheet.create({
     width: "25%",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "flex-end"
   }
 });
 
-export const toolTip = StyleSheet.create({
+export const MenuBarRight = StyleSheet.create({
   wrapper: {
     width: "100%",
     height: "100%",
@@ -123,25 +128,109 @@ export const World = StyleSheet.create({
   map: {
     height: "100%",
     width: "100%"
-  }
+  },
+  center: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  pointer: { width: 35, height: 35, resizeMode: "contain" }
 });
 
 export const Journey = StyleSheet.create({
   jWrapper: {
-    position: "absolute",
-    top: hp(8),
-    width: "100%",
-    bottom: 0
+    flex: 1
   },
   containers: {
     width: DeviceWidth,
     height: "100%"
   },
-  stageOne: {
+  stageWrapper: {
     width: "90%",
-    height: "40%",
-    padding: wp(10),
+    padding: wp(8),
     alignSelf: "center",
-    borderRadius: 8
+    borderRadius: 8,
+    flexDirection: "row",
+    marginBottom: 5
+  },
+  dotWrapper: {
+    height: "100%",
+    width: "15%",
+    backgroundColor: "transparent"
+  },
+  inputWrapper: { width: "85%" },
+  dropDown: { height: 30, width: "100%" },
+  dropDownLabelStyle: {
+    fontSize: 7,
+    color: "rgba(0, 0, 0, 0.38)"
+  },
+  dropDownTextStyle: {
+    textAlign: "left",
+    fontSize: 14
+  },
+  stageLabel: {
+    fontSize: 12,
+    color: "gray",
+    marginBottom: 5
+  },
+  listWrapper: {
+    padding: 8,
+    borderRadius: 5,
+    borderWidth: 0.8,
+    borderColor: "lightgray",
+    width: "100%",
+    height: (1 / 2) * DeviceWidth,
+    overflow: "hidden"
+  }
+});
+
+export const ToolTip = StyleSheet.create({
+  wrapper: {
+    position: "absolute",
+    elevation: 10,
+    width: 50,
+    padding: 10,
+    alignItems: "center",
+    justifyContent: "space-around",
+    bottom: 15,
+    right: 15
+  },
+  trace: {
+    width: 35,
+    height: 35,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 35
+  },
+  cancel: {
+    width: 40,
+    height: 40,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 35
+  },
+  proceed: {
+    width: 45,
+    height: 45,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 35
+  }
+});
+
+export const Button = StyleSheet.create({
+  wrapper: {
+    height: 50,
+    marginTop: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    alignSelf: "center",
+    borderRadius: 50
+  },
+  label: {
+    fontSize: 14,
+    color: "white"
   }
 });

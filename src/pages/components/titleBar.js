@@ -11,6 +11,7 @@ import { light, dark } from "../styles";
 const TitleBar = props => {
   let action = props.action;
   let Right = props.right;
+  let Left = props.left;
   let children = props.children;
 
   return (
@@ -18,22 +19,7 @@ const TitleBar = props => {
       {/** Item Left, Item Center, Item Right */}
       <View style={light.titleBar.titleLeft}>
         {/** Action Tool component here */}
-        <TouchableOpacity
-          style={light.titleBar.navBackOpacity}
-          onPress={action}
-        >
-          <Ionicons
-            name={props.leftIcoName ? props.leftIcoName : "ios-arrow-back"}
-            color={
-              props.color === "white"
-                ? "black"
-                : props.color === "black"
-                ? "white"
-                : "black"
-            }
-            size={22}
-          />
-        </TouchableOpacity>
+        {Left}
       </View>
       <View style={light.titleBar.titleCenter}>
         {/** Title goes here */}
