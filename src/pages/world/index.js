@@ -62,7 +62,7 @@ export default class World extends React.PureComponent {
   };
 
   componentDidMount() {
-    this.tracker();
+    // this.tracker();
   }
 
   statusBar = () => {
@@ -81,7 +81,8 @@ export default class World extends React.PureComponent {
     return (
       <View style={light.ToolTip.wrapper}>
         <TouchableOpacity
-          onPress={() => {
+          onPress={async () => {
+            !this.state.location ? await this.tracker() : null;
             let region = {
               latitude: this.state.location.latitude,
               longitude: this.state.location.longitude,

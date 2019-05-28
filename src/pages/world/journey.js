@@ -105,11 +105,11 @@ class journey extends React.PureComponent {
             </TouchableOpacity>
           ) : null
         }
-        right={
-          <View style={light.MenuBarRight.wrapper}>
-            <Feather name="settings" size={light.wp(6)} color="black" />
-          </View>
-        }
+        // right={
+        //   <View style={light.MenuBarRight.wrapper}>
+        //     <Feather name="settings" size={light.wp(6)} color="black" />
+        //   </View>
+        // }
       />
     );
   };
