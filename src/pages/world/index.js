@@ -62,7 +62,7 @@ export default class World extends React.PureComponent {
   };
 
   componentDidMount() {
-    // this.tracker();
+    this.tracker();
   }
 
   statusBar = () => {
